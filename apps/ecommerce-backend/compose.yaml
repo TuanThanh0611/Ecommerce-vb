@@ -1,0 +1,10 @@
+services:
+  database:
+    image: 'mysql:8.0'
+    ports:
+      - '3306:3306'
+    environment:
+      - 'MYSQL_ROOT_PASSWORD=root'      # Set the root user password
+      - 'MYSQL_DATABASE=ecommercevb'     # Create a default database
+    volumes:
+      - '~/volumes/ivo/mysql:/var/lib/mysql'  # Persist data
